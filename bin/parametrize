@@ -5,17 +5,18 @@
 
 $stdin.read.split("\n").each do |line|
   hi = line.split.inject({}) do |hash, word|
-    h.merge case word
+    hash.merge case word
     when /\Ahi/ then {}
-    when /=/    then Hash[*word.split '=']
+    when /=/    then Hash[*word.split('=')]
     else Hash['name', word]
     end
   end
 
-  puts 'HI %-15s %-7s %-7s %-s' % [
-    hi['name'],
-    hi['guifg'] || %q(''),
-    hi['guibg'] || %q(''),
-    hi['cterm'] || %q(none)
+  puts 'HI %-16s %-7s %-7s %-11s %-s' % [
+    hi['name'   ],
+    hi['ctermfg'] || '-',
+    hi['ctermbg'] || '-',
+    hi['cterm'  ] || '-',
+    hi['guisp'  ] && "guisp=#{hi['guisp']}"
   ]
 end
