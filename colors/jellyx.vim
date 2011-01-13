@@ -152,6 +152,11 @@ HI Visual           255     96      -
 HI VisualNOS        255     60      -
 HI WildMenu         0       150     bold
 
+"}}}
+
+
+""" Common Syntax {{{
+
 HI Comment          244     -       -
 HI Constant         229     -       -
 HI Identifier       182     -       none
@@ -165,7 +170,7 @@ HI Type             146     -       none
 "}}}
 
 
-""" Diff / Vimdiff
+""" Diff / Vimdiff {{{
 
 HI diffAdded        150     -       -
 HI diffRemoved      174     -       -
@@ -174,6 +179,8 @@ HI diffDelete       bg      186     none
 HI diffDelete       bg      246     none
 HI diffChange       bg      181     -
 HI diffText         bg      174     none
+
+"}}}
 
 
 """ Cleanup {{{
