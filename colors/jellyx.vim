@@ -126,7 +126,7 @@ HI Error            15      1       -
 HI ErrorMsg         15      1       -
 HI FoldColumn       247     bg      -
 HI Folded           255     60      -
-HI IncSearch        0       223     none
+HI IncSearch        -       -       inverse
 HI LineNr           247     -       -
 HI MatchParen       fg      17      bold
 HI NonText          240     -       -
@@ -134,7 +134,7 @@ HI Pmenu            0       246     -
 HI PmenuSbar        -       243     -
 HI PmenuSel         0       243     -
 HI PmenuThumb       -       252     -
-HI Search           255     103     -
+HI Search           217     bg      underline
 HI SignColumn       248     -       -
 HI SpecialKey       77      -       -
 HI SpellBad         160     bg      underline   guisp=#df0000
