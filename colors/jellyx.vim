@@ -148,8 +148,8 @@ HI Todo             184     bg      bold
 HI Title            225     -       -
 HI Underlined       39      -       underline
 HI VertSplit        237     237     none
-HI Visual           255     96      -
-HI VisualNOS        255     60      -
+HI Visual           fg      96      -
+HI VisualNOS        fg      60      -
 HI WildMenu         0       150     bold
 
 "}}}
