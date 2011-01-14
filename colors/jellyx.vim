@@ -127,7 +127,7 @@ HI ErrorMsg         15      1       -
 HI FoldColumn       247     bg      -
 HI Folded           255     60      -
 HI IncSearch        -       -       inverse
-HI LineNr           247     -       -
+HI LineNr           240     -       -
 HI MatchParen       fg      17      bold
 HI NonText          240     -       -
 HI Pmenu            0       246     -
