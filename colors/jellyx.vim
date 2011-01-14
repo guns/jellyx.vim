@@ -119,38 +119,45 @@ endfunction "}}}
 """ Common UI {{{
 
 HI Normal           252     0       none
+
 HI Cursor           -       214     -
 HI CursorColumn     -       238     -
 HI CursorLine       -       233     none
+
+HI Visual           fg      96      -
+HI VisualNOS        fg      60      -
+HI IncSearch        -       -       inverse
+HI Search           217     bg      underline
+
 HI Error            15      1       -
 HI ErrorMsg         15      1       -
+
 HI FoldColumn       247     bg      -
 HI Folded           255     60      -
-HI IncSearch        -       -       inverse
-HI LineNr           240     -       -
-HI MatchParen       fg      17      bold
-HI NonText          240     -       -
-HI Pmenu            0       246     -
-HI PmenuSbar        -       243     -
-HI PmenuSel         0       243     -
-HI PmenuThumb       -       252     -
-HI Search           217     bg      underline
-HI SignColumn       248     -       -
-HI SpecialKey       77      -       -
-HI SpellBad         160     bg      underline   guisp=#df0000
-HI SpellCap         189     bg      underline
-HI SpellRare        168     bg      underline
 HI StatusLine       -       239     bold
 HI StatusLineNC     -       237     none
 HI TabLine          249     237     none
 HI TabLineFill      249     237     none
-HI Todo             184     bg      bold
-HI Title            225     -       -
-HI Underlined       39      -       underline
 HI VertSplit        237     237     none
-HI Visual           fg      96      -
-HI VisualNOS        fg      60      -
+
+HI LineNr           240     -       -
+HI NonText          240     -       -
+HI SpecialKey       77      -       -
+
+HI Pmenu            0       246     -
+HI PmenuSbar        -       243     -
+HI PmenuSel         0       243     -
+HI PmenuThumb       -       252     -
 HI WildMenu         0       150     bold
+HI Title            225     -       -
+
+HI SpellBad         160     bg      underline   guisp=#df0000
+HI SpellCap         189     bg      underline
+HI SpellRare        168     bg      underline
+
+HI Underlined       39      -       underline
+HI MatchParen       fg      17      bold
+HI SignColumn       248     -       -
 
 "}}}
 
@@ -165,6 +172,7 @@ HI Number           180     -       -
 HI PreProc          150     -       -
 HI Special          174     -       -
 HI Statement        110     -       none
+HI Todo             184     bg      bold
 HI Type             146     -       none
 
 "}}}
