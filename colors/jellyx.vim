@@ -129,8 +129,8 @@ HI VisualNOS        fg      60      -
 HI IncSearch        -       -       inverse
 HI Search           217     bg      underline
 
-HI Error            15      1       -
-HI ErrorMsg         15      1       -
+HI Error            -       88      -
+HI ErrorMsg         -       88      -
 
 HI FoldColumn       247     bg      -
 HI Folded           255     60      -
