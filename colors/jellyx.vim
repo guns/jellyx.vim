@@ -183,6 +183,17 @@ HI diffText         bg      174     none
 "}}}
 
 
+""" Custom groups {{{
+
+syntax match Tab            /\v\t/
+syntax match TrailingWS     /\v\s+$/
+
+HI Tab              -       234     -
+HI TrailingWS       -       54      -
+
+"}}}
+
+
 """ Cleanup {{{
 
 delcommand  HI
