@@ -12,7 +12,7 @@ $stdin.read.split("\n").each do |line|
     end
   end
 
-  puts 'HI %-16s %-7s %-7s %-11s %-s' % [
+  puts 'HI %-16s %-7s %-7s %-12s%-s' % [
     hi['name'   ],
     hi['ctermfg'] || '-',
     hi['ctermbg'] || '-',
