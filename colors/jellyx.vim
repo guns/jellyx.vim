@@ -133,12 +133,12 @@ HI ErrorMsg         -       88      -
 
 HI FoldColumn       247     bg      -
 HI Folded           255     60      -
-HI StatusLine       -       239     bold
-HI StatusLineNC     -       237     none
+HI StatusLine       -       234     bold
+HI StatusLineNC     -       234     none
 HI TabLine          249     236     none
 HI TabLineSel       -       bg      bold,italic
 HI TabLineFill      bg      0       none
-HI VertSplit        237     237     none
+HI VertSplit        234     234     none
 
 HI LineNr           240     -       -
 HI NonText          240     -       -
