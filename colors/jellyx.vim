@@ -131,7 +131,7 @@ HI Search           217     bg      underline
 
 HI ErrorMsg         -       88      -
 
-HI FoldColumn       247     bg      -
+HI FoldColumn       240     bg      -
 HI Folded           255     60      -
 HI StatusLine       -       234     bold
 HI StatusLineNC     -       234     none
