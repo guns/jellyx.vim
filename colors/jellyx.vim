@@ -130,9 +130,9 @@ HI IncSearch        -       -       inverse
 HI Search           217     bg      underline
 
 HI LineNr           240     -       -
-HI NonText          240     -       -
-HI SpecialKey       77      -       -
 HI FoldColumn       240     bg      -
+HI SignColumn       240     -       -
+HI NonText          240     -       -
 
 HI Folded           140     bg      bold,italic
 HI StatusLine       -       234     bold
@@ -153,9 +153,9 @@ HI SpellBad         160     bg      underline   guisp=#df0000
 HI SpellCap         189     bg      underline
 HI SpellRare        168     bg      underline
 
+HI SpecialKey       77      -       -
 HI ErrorMsg         -       88      -
 HI MatchParen       fg      17      bold
-HI SignColumn       248     -       -
 
 "}}}
 
