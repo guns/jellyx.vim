@@ -135,8 +135,9 @@ HI FoldColumn       247     bg      -
 HI Folded           255     60      -
 HI StatusLine       -       239     bold
 HI StatusLineNC     -       237     none
-HI TabLine          249     237     none
-HI TabLineFill      249     237     none
+HI TabLine          249     236     none
+HI TabLineSel       -       bg      bold,italic
+HI TabLineFill      bg      0       none
 HI VertSplit        237     237     none
 
 HI LineNr           240     -       -
