@@ -142,10 +142,10 @@ HI TabLineSel       -       bg      bold,italic
 HI TabLineFill      bg      0       none
 HI VertSplit        234     234     none
 
-HI Pmenu            0       246     -
-HI PmenuSel         0       243     -
-HI PmenuSbar        -       243     -
-HI PmenuThumb       -       252     -
+HI Pmenu            fg      234     -
+HI PmenuSel         0       140     -
+HI PmenuSbar        -       234     -
+HI PmenuThumb       -       140     -
 HI WildMenu         0       150     bold
 HI Title            225     -       -
 
