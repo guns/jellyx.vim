@@ -129,20 +129,18 @@ HI VisualNOS        fg      60      -
 HI IncSearch        -       -       inverse
 HI Search           217     bg      underline
 
-HI ErrorMsg         -       88      -
-
+HI LineNr           240     -       -
+HI NonText          240     -       -
+HI SpecialKey       77      -       -
 HI FoldColumn       240     bg      -
-HI Folded           255     60      -
+
+HI Folded           140     bg      bold,italic
 HI StatusLine       -       234     bold
 HI StatusLineNC     -       234     none
 HI TabLine          249     236     none
 HI TabLineSel       -       bg      bold,italic
 HI TabLineFill      bg      0       none
 HI VertSplit        234     234     none
-
-HI LineNr           240     -       -
-HI NonText          240     -       -
-HI SpecialKey       77      -       -
 
 HI Pmenu            0       246     -
 HI PmenuSel         0       243     -
@@ -155,6 +153,7 @@ HI SpellBad         160     bg      underline   guisp=#df0000
 HI SpellCap         189     bg      underline
 HI SpellRare        168     bg      underline
 
+HI ErrorMsg         -       88      -
 HI MatchParen       fg      17      bold
 HI SignColumn       248     -       -
 
