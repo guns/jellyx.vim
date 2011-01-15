@@ -9,7 +9,7 @@ let g:jellyx_devmode = 1
 execute 'source colors/jellyx.vim'
 
 " Don't go totally blind
-syn match vimHighlight "\<HI\>" skipwhite nextgroup=vimHiBang,@vimHighlightCluster
+syntax match vimHighlight "\<HI\>" skipwhite nextgroup=vimHiBang,@vimHighlightCluster
 
 " Quick colorscheme switcher
 noremap <Leader><Leader> :call <SID>ToggleColorscheme()<CR>
