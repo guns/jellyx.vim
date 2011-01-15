@@ -23,7 +23,7 @@ endif
 
 let colors_name = 'jellyx'
 
-if &t_Co != 256 && &t_Co != 88 && ! has('gui_running')
+if &t_Co != 256 && ! has('gui_running')
     echoerr 'Not enough colors to display JellyX!'
     echoerr 'Go buy yourself a new terminal.'
     finish
@@ -129,7 +129,6 @@ HI VisualNOS        fg      60      -
 HI IncSearch        -       -       inverse
 HI Search           217     bg      underline
 
-HI Error            -       88      -
 HI ErrorMsg         -       88      -
 
 HI FoldColumn       247     bg      -
@@ -145,8 +144,8 @@ HI NonText          240     -       -
 HI SpecialKey       77      -       -
 
 HI Pmenu            0       246     -
-HI PmenuSbar        -       243     -
 HI PmenuSel         0       243     -
+HI PmenuSbar        -       243     -
 HI PmenuThumb       -       252     -
 HI WildMenu         0       150     bold
 HI Title            225     -       -
@@ -155,7 +154,6 @@ HI SpellBad         160     bg      underline   guisp=#df0000
 HI SpellCap         189     bg      underline
 HI SpellRare        168     bg      underline
 
-HI Underlined       39      -       underline
 HI MatchParen       fg      17      bold
 HI SignColumn       248     -       -
 
@@ -166,6 +164,7 @@ HI SignColumn       248     -       -
 
 HI Comment          244     -       -
 HI Constant         229     -       -
+HI Error            -       88      -
 HI Identifier       182     -       none
 HI Ignore           238     -       -
 HI Number           180     -       -
@@ -174,6 +173,7 @@ HI Special          174     -       -
 HI Statement        110     -       none
 HI Todo             184     bg      bold
 HI Type             146     -       none
+HI Underlined       39      -       underline
 
 "}}}
 
