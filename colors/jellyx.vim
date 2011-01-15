@@ -101,8 +101,8 @@ function! s:HI(group, fg, bg, fx, ...)
 
     if a:fx != '-'
         " rxvt-unicode can display italic fonts, among other things
-        if a:fx == 'italic' && &term !~ '^rxvt-unicode'
-            execute 'highlight '.a:group.' term='.a:fx.' gui='.a:fx.' cterm=none'
+        if a:fx =~ 'italic' && &term !~ '^rxvt-unicode'
+            execute 'highlight '.a:group.' term='.a:fx.' gui='.a:fx.' cterm='.substitute(a:fx,',\?italic,\?','','g')
         else
             execute 'highlight '.a:group.' term='.a:fx.' gui='.a:fx.' cterm='.a:fx
         endif
