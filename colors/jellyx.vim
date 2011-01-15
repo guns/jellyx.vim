@@ -127,7 +127,7 @@ HI CursorLine       -       233     none
 HI Visual           fg      96      -
 HI VisualNOS        fg      60      -
 HI IncSearch        -       -       inverse
-HI Search           217     bg      underline
+HI Search           223     bg      underline
 
 HI LineNr           240     -       -
 HI FoldColumn       240     bg      -
