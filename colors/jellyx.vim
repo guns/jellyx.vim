@@ -210,11 +210,13 @@ HI diffText         bg      174     none
 
 """ Custom groups {{{
 
-autocmd Syntax * syntax match Tab           /\v\t/      containedin=ALL
-autocmd Syntax * syntax match TrailingWS    /\v\s+$/    containedin=ALL
+if exists('g:jellyx_space_errors')
+    autocmd Syntax * syntax match Tab           /\v\t/      containedin=ALL
+    autocmd Syntax * syntax match TrailingWS    /\v\s+$/    containedin=ALL
 
-HI Tab              -       234     -
-HI TrailingWS       -       89      -
+    HI Tab              -       234     -
+    HI TrailingWS       -       89      -
+endif
 
 "}}}
 
