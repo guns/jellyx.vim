@@ -5,8 +5,13 @@ if exists('g:jellyx_devmode')
 endif
 let g:jellyx_devmode = 1
 
-" source the development script
-execute 'source colors/jellyx.vim'
+command! JellyX call JellyX()
+function! JellyX()
+    :source <sfile>:p:h/colors/jellyx.vim
+endfunction
+
+" source the development script now
+JellyX
 
 " Don't go totally blind
 syntax match vimHighlight "\<HI\>" skipwhite nextgroup=vimHiBang,@vimHighlightCluster
@@ -17,6 +22,6 @@ function! <SID>ToggleColorscheme()
     if g:colors_name == 'jellyx'
         :colorscheme jellybeans
     else
-        :source /usr/local/project/vimfiles/jellyx.vim/colors/jellyx.vim
+        JellyX
     endif
 endfunction
