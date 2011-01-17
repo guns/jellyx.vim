@@ -11,6 +11,23 @@
 " License:  MIT (knock yourself out)
 
 
+" INSPIRED BY: {{{
+"
+" Main color palette from Xoria256.vim:
+"
+" Author:   Dmitriy Y. Zotikov (xio) <xio@ungrund.org>
+" Homepage: http://www.vim.org/scripts/script.php?script_id=2140
+"
+" Misc colors and function-based approach from Jellybeans.vim:
+"
+" Author:   NanoTech <http://nanotech.nanotechcorp.net/>
+" Homepage: http://github.com/nanotech/jellybeans.vim
+" License:  MIT
+" Copyright (c) 2009-2010 NanoTech
+"
+"}}}
+
+
 """ Initialize {{{
 
 set background=dark
