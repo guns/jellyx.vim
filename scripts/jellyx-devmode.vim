@@ -1,22 +1,33 @@
-""" Run as `vim -S jellyx-dev.vim', or `rake devmode'
+""" Run as `vim -S jellyx-devmode.vim', or `rake devmode'
 
 if exists('g:jellyx_devmode')
     finish
 endif
 let g:jellyx_devmode = 1
 
-" source the development script
-execute 'source colors/jellyx.vim'
 
-" Don't go totally blind
-syntax match vimHighlight "\<HI\>" skipwhite nextgroup=vimHiBang,@vimHighlightCluster
+""" Commands
+
+command! JellyX call JellyX()
+function! JellyX()
+    :source <sfile>:p:h/colors/jellyx.vim
+endfunction
 
 " Quick colorscheme switcher
-noremap <Leader><Leader> :call <SID>ToggleColorscheme()<CR>
 function! <SID>ToggleColorscheme()
     if g:colors_name == 'jellyx'
         :colorscheme jellybeans
     else
-        :source /usr/local/project/vimfiles/jellyx.vim/colors/jellyx.vim
+        JellyX
     endif
 endfunction
+
+
+""" Go!
+
+" highlight groups after our custom command
+syntax match vimHighlight "\<HI\>" skipwhite nextgroup=vimHiBang,@vimHighlightCluster
+
+JellyX
+
+noremap <Leader><Leader> :call <SID>ToggleColorscheme()<CR>
