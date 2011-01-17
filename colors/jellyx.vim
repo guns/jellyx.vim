@@ -214,7 +214,7 @@ autocmd Syntax * syntax match Tab           /\v\t/      containedin=ALL
 autocmd Syntax * syntax match TrailingWS    /\v\s+$/    containedin=ALL
 
 HI Tab              -       234     -
-HI TrailingWS       -       127     -
+HI TrailingWS       -       89      -
 
 "}}}
 
