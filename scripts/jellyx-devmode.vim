@@ -1,9 +1,9 @@
 """ Run as `vim -S jellyx-devmode.vim', or `rake devmode'
 
-if exists('g:jellyx_devmode')
+if exists('jellyx_devmode')
     finish
 endif
-let g:jellyx_devmode = 1
+let jellyx_devmode = 1
 
 
 """ Commands
@@ -16,6 +16,8 @@ endfunction
 " Quick colorscheme switcher
 function! <SID>ToggleColorscheme()
     if g:colors_name == 'jellyx'
+        :colorscheme xoria256
+    elseif g:colors_name == 'xoria256'
         :colorscheme jellybeans
     else
         JellyX
