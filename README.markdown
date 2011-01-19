@@ -6,7 +6,9 @@
     *                |___|                                  *
 
 
-Screenshots (rxvt-unicode 9.10 with --enable-256-color configure option)
+### Screenshots
+
+    rxvt-unicode 9.10 with --enable-256-color configure option
 
  * Ruby, with incremental search
 
