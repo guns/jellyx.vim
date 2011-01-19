@@ -213,12 +213,12 @@ HI diffText         bg      174     none
 
 """ Custom groups {{{
 
-if exists('jellyx_whitespace')
-    autocmd Syntax * syntax match Tab           /\v\t/      containedin=ALL
-    autocmd Syntax * syntax match TrailingWS    /\v\s+$/    containedin=ALL
+if exists('g:jellyx_show_whitespace')
+    syntax match Tab           /\v\t/      containedin=ALL
+    syntax match TrailingWS    /\v\s+$/    containedin=ALL
 
-    HI Tab              -       234     -
-    HI TrailingWS       -       89      -
+    HI Tab          -       234     -
+    HI TrailingWS   -       89      -
 endif
 
 "}}}
