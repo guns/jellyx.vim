@@ -8,7 +8,7 @@
 
 ### Options
 
- * Show tabs in dark grey, trailing whitespace in dark pink
+Show tabs in dark grey, trailing whitespace in dark pink
 
     let g:jellyx_show_whitespace = 1
     colorscheme jellyx
