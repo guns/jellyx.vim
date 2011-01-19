@@ -7,7 +7,7 @@
 
 " Version:  0.1
 " Author:   Sung Pae <sung@metablu.com>
-" Homepage: http://github.com/guns/jellyx
+" Homepage: http://github.com/guns/jellyx.vim
 " License:  MIT (knock yourself out)
 
 
