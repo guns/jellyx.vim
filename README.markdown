@@ -6,10 +6,7 @@
     *                |___|                                  *
 
 
-### Screenshots
-
-    Term: rxvt-unicode 9.10 with --enable-256-color configure option
-    Font: Consolas
+Screenshots (rxvt-unicode 9.10 with --enable-256-color configure option)
 
  * Ruby, with incremental search
 
