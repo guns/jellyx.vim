@@ -106,7 +106,9 @@ let s:xterm_colors = {
     \ '250': '#bcbcbc', '251': '#c6c6c6', '252': '#d0d0d0', '253': '#dadada', '254': '#e4e4e4',
     \ '255': '#eeeeee', 'fg': 'fg', 'bg': 'bg', 'none': 'none' } "}}}
 
-command! -nargs=+ HI call s:HI(<f-args>) "{{{
+" We are primarily targeting 256-color terminals; "{{{
+" exact GUI RGB values are therefore easy to obtain
+command! -nargs=+ HI call s:HI(<f-args>)
 function! s:HI(group, fg, bg, fx, ...)
     if a:fg != '-'
         execute 'highlight '.a:group.' ctermfg='.a:fg.' guifg='.s:xterm_colors[a:fg]
@@ -125,6 +127,7 @@ function! s:HI(group, fg, bg, fx, ...)
         endif
     endif
 
+    " Any additional arguments are simply passed along
     if a:0
         execute 'highlight '.a:group.' '.join(a:000,' ')
     endif
@@ -210,12 +213,12 @@ HI diffText         bg      174     none
 
 """ Custom groups {{{
 
-if exists('g:jellyx_whitespace')
-    autocmd Syntax * syntax match Tab           /\v\t/      containedin=ALL
-    autocmd Syntax * syntax match TrailingWS    /\v\s+$/    containedin=ALL
+if exists('g:jellyx_show_whitespace')
+    syntax match Tab           /\v\t/      containedin=ALL
+    syntax match TrailingWS    /\v\s+$/    containedin=ALL
 
-    HI Tab              -       234     -
-    HI TrailingWS       -       89      -
+    HI Tab          -       234     -
+    HI TrailingWS   -       89      -
 endif
 
 "}}}
