@@ -6,6 +6,14 @@
     *                |___|                                  *
 
 
+### Options
+
+ * Show tabs in dark grey, trailing whitespace in dark pink
+
+    let g:jellyx_show_whitespace = 1
+    colorscheme jellyx
+
+
 ### Screenshots
 
     Term: rxvt-unicode 9.10 with --enable-256-color configure option
@@ -47,5 +55,5 @@ Misc colors and function-based approach from Jellybeans.vim:
 
  * Version:  0.1
  * Author:   [Sung Pae](sung@metablu.com)
- * Homepage: <http://github.com/guns/jellyx>
+ * Homepage: <http://github.com/guns/jellyx.vim>
  * License:  MIT (knock yourself out)
