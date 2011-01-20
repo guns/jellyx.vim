@@ -41,7 +41,7 @@ whitespace](http://guns.github.com/jellyx.vim/images/c-with-whitespace.png)
 
 Main color palette from Xoria256.vim:
 
- * Author:   [Dmitriy Y. Zotikov (xio)](xio@ungrund.org)
+ * Author:   [Dmitriy Y. Zotikov (xio)](mailto:xio@ungrund.org)
  * Homepage: <http://www.vim.org/scripts/script.php?script_id=2140>
 
 Misc colors and function-based approach from Jellybeans.vim:
@@ -54,6 +54,6 @@ Misc colors and function-based approach from Jellybeans.vim:
 ### LICENSE
 
  * Version:  0.1
- * Author:   [Sung Pae](sung@metablu.com)
+ * Author:   [Sung Pae](mailto:sung@metablu.com)
  * Homepage: <http://github.com/guns/jellyx.vim>
  * License:  MIT (knock yourself out)
