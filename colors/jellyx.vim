@@ -145,7 +145,7 @@ HI CursorColumn     -       238     -
 HI CursorLine       -       233     none
 
 HI Visual           fg      96      -
-HI VisualNOS        fg      60      -
+HI VisualNOS        fg      60      none
 HI IncSearch        -       -       inverse
 HI Search           158     bg      underline
 
