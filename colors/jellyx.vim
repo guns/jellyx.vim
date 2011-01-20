@@ -153,6 +153,7 @@ HI LineNr           240     bg      -
 HI FoldColumn       240     bg      -
 HI SignColumn       240     bg      -
 HI NonText          240     bg      -
+HI ColorColumn      fg      60      none
 
 HI Folded           232     60      bold,italic
 HI StatusLine       -       234     bold
