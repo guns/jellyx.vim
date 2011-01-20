@@ -172,6 +172,7 @@ HI Title            225     -       -
 HI SpellBad         160     bg      underline   guisp=#df0000
 HI SpellCap         189     bg      underline
 HI SpellRare        168     bg      underline
+HI SpellLocal       87      bg      underline
 
 HI SpecialKey       77      -       -
 HI ErrorMsg         -       88      -
