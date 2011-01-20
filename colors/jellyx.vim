@@ -139,10 +139,10 @@ endfunction "}}}
 """ Common UI {{{
 
 HI Normal           252     0       none
-
 HI Cursor           -       214     -
-HI CursorColumn     -       238     -
+
 HI CursorLine       -       233     none
+HI CursorColumn     -       233     none
 
 HI Visual           fg      96      -
 HI VisualNOS        fg      60      none
