@@ -53,7 +53,6 @@ Misc colors and function-based approach from Jellybeans.vim:
 
 ### LICENSE
 
- * Version:  0.1
  * Author:   [Sung Pae](mailto:sung@metablu.com)
  * Homepage: <http://github.com/guns/jellyx.vim>
  * License:  MIT (knock yourself out)
