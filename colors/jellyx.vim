@@ -149,10 +149,10 @@ HI VisualNOS        fg      60      none
 HI IncSearch        -       -       inverse
 HI Search           158     bg      underline
 
-HI LineNr           240     -       -
+HI LineNr           240     bg      -
 HI FoldColumn       240     bg      -
-HI SignColumn       240     -       -
-HI NonText          240     -       -
+HI SignColumn       240     bg      -
+HI NonText          240     bg      -
 
 HI Folded           232     60      bold,italic
 HI StatusLine       -       234     bold
