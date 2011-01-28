@@ -29,8 +29,7 @@ Show tabs in dark grey, trailing whitespace in dark pink
 
  * C, with g:jellyx_show_whitespace=1
 
-![C with
-whitespace](http://guns.github.com/jellyx.vim/images/c-with-whitespace.png)
+![C with whitespace](http://guns.github.com/jellyx.vim/images/c-with-whitespace.png)
 
  * VimScript, with folds and completion popup
 
