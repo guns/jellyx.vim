@@ -104,7 +104,7 @@ let s:xterm_colors = {
     \ '240': '#585858', '241': '#606060', '242': '#666666', '243': '#767676', '244': '#808080',
     \ '245': '#8a8a8a', '246': '#949494', '247': '#9e9e9e', '248': '#a8a8a8', '249': '#b2b2b2',
     \ '250': '#bcbcbc', '251': '#c6c6c6', '252': '#d0d0d0', '253': '#dadada', '254': '#e4e4e4',
-    \ '255': '#eeeeee', 'fg': 'fg', 'bg': 'bg', 'none': 'none' } "}}}
+    \ '255': '#eeeeee', 'fg': 'fg', 'bg': 'bg', 'NONE': 'NONE' } "}}}
 
 " We are primarily targeting 256-color terminals; "{{{
 " exact GUI RGB values are therefore easy to obtain
@@ -138,14 +138,14 @@ endfunction "}}}
 
 """ Common UI {{{
 
-HI Normal           252     0       none
+HI Normal           252     0       NONE
 HI Cursor           -       214     -
 
-HI CursorLine       -       233     none
-HI CursorColumn     -       233     none
+HI CursorLine       -       233     NONE
+HI CursorColumn     -       233     NONE
 
 HI Visual           fg      96      -
-HI VisualNOS        fg      60      none
+HI VisualNOS        fg      60      NONE
 HI IncSearch        -       -       inverse
 HI Search           158     bg      underline
 
@@ -153,15 +153,15 @@ HI LineNr           240     bg      -
 HI FoldColumn       240     bg      -
 HI SignColumn       240     bg      -
 HI NonText          240     bg      -
-HI ColorColumn      fg      60      none
+HI ColorColumn      fg      60      NONE
 
 HI Folded           232     60      bold,italic
 HI StatusLine       -       234     bold
-HI StatusLineNC     -       234     none
-HI TabLine          249     236     none
+HI StatusLineNC     -       234     NONE
+HI TabLine          249     236     NONE
 HI TabLineSel       -       bg      bold,italic
-HI TabLineFill      bg      0       none
-HI VertSplit        234     234     none
+HI TabLineFill      bg      0       NONE
+HI VertSplit        234     234     NONE
 
 HI Pmenu            fg      234     -
 HI PmenuSel         0       140     -
@@ -187,14 +187,14 @@ HI MatchParen       fg      17      bold
 HI Comment          244     -       -
 HI Constant         229     -       -
 HI Error            -       88      -
-HI Identifier       182     -       none
+HI Identifier       182     -       NONE
 HI Ignore           238     -       -
 HI Number           180     -       -
 HI PreProc          150     -       -
 HI Special          174     -       -
-HI Statement        110     -       none
+HI Statement        110     -       NONE
 HI Todo             184     bg      bold
-HI Type             146     -       none
+HI Type             146     -       NONE
 HI Underlined       39      -       underline
 
 "}}}
@@ -205,10 +205,10 @@ HI Underlined       39      -       underline
 HI diffAdded        150     -       -
 HI diffRemoved      174     -       -
 HI diffAdd          bg      151     -
-HI diffDelete       bg      186     none
-HI diffDelete       bg      246     none
+HI diffDelete       bg      186     NONE
+HI diffDelete       bg      246     NONE
 HI diffChange       bg      181     -
-HI diffText         bg      174     none
+HI diffText         bg      174     NONE
 
 "}}}
 
