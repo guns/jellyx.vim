@@ -206,7 +206,6 @@ HI diffAdded        150     -       -
 HI diffRemoved      174     -       -
 HI diffAdd          bg      151     -
 HI diffDelete       bg      186     NONE
-HI diffDelete       bg      246     NONE
 HI diffChange       bg      181     -
 HI diffText         bg      174     NONE
 
