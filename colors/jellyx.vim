@@ -46,7 +46,8 @@ if &t_Co != 256 && ! has('gui_running')
     finish
 endif
 
-let s:term_has_italic = system('command -v tput && tput sitm')
+" TODO: isn't there an analogue of system() that discards output and returns exit value?
+let s:term_has_italic = system('command -v tput && tput sitm && echo -n true') =~# 'true$'
 
 "}}}
 
@@ -121,7 +122,7 @@ function! s:HI(group, fg, bg, fx, ...)
     endif
 
     if a:fx != '-'
-        if a:fx =~ 'italic' && s:term_has_italic
+        if a:fx =~ 'italic' && !s:term_has_italic
             execute 'highlight '.a:group.' term='.a:fx.' gui='.a:fx.' cterm='.substitute(a:fx,'italic','bold','g')
         else
             execute 'highlight '.a:group.' term='.a:fx.' gui='.a:fx.' cterm='.a:fx
