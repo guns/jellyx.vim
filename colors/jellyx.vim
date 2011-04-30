@@ -6,7 +6,7 @@
 "                |___|
 
 " Version:  0.1
-" Author:   Sung Pae <sung@metablu.com>
+" Author:   Sung Pae <self@sungpae.com>
 " Homepage: http://github.com/guns/jellyx.vim
 " License:  MIT (knock yourself out)
 
@@ -34,11 +34,11 @@ set background=dark
 
 highlight clear
 
-if exists('syntax_on')
+if exists('g:syntax_on')
     syntax reset
 endif
 
-let colors_name = 'jellyx'
+let g:colors_name = 'jellyx'
 
 if &t_Co != 256 && ! has('gui_running')
     echoerr 'Not enough colors to display JellyX!'
