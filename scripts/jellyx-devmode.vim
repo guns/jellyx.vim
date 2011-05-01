@@ -5,7 +5,12 @@ if exists('jellyx_devmode')
 endif
 let jellyx_devmode = 1
 
+" extend core vim syntax groups
+silent! syntax clear vimHighlight
+syntax match vimHighlight "\<HI\>" skipwhite nextgroup=vimHiBang,@vimHighlightCluster
+
 " Quick colorscheme switcher
+noremap <Leader><Leader> :call <SID>ToggleColorscheme()<CR>
 function! <SID>ToggleColorscheme(...)
     if a:0 && a:1 == 'init'
         :source <sfile>:p:h/colors/jellyx.vim
@@ -17,10 +22,5 @@ function! <SID>ToggleColorscheme(...)
         :source <sfile>:p:h/colors/jellyx.vim
     endif
 endfunction
-
-" highlight groups after our custom command
-syntax match vimHighlight "\<HI\>" skipwhite nextgroup=vimHiBang,@vimHighlightCluster
-
-noremap <Leader><Leader> :call <SID>ToggleColorscheme()<CR>
 
 call <SID>ToggleColorscheme('init')
