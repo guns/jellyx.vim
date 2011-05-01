@@ -118,7 +118,7 @@ let s:xterm_colors = {
     \ '255': '#eeeeee', 'fg': 'fg', 'bg': 'bg', 'NONE': 'NONE' } "}}}
 
 " We are primarily targeting 256-color terminals; "{{{
-" exact GUI RGB values are therefore easy to obtain
+" corresponding GUI RGB values are therefore easy to obtain
 command! -nargs=+ HI call s:HI(<f-args>)
 function! s:HI(group, fg, bg, fx, ...)
     if a:fg != '-'
