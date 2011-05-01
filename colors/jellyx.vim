@@ -42,7 +42,7 @@ let g:colors_name = 'jellyx'
 
 if &t_Co != 256 && ! has('gui_running')
     echoerr 'Not enough colors to display JellyX!'
-    echoerr 'Go buy yourself a new terminal.'
+    echoerr "Here's a nickel kid. Get yourself a better terminal."
     finish
 endif
 
