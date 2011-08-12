@@ -50,6 +50,13 @@ Misc colors and function-based approach from Jellybeans.vim:
  * License:  MIT
 
 
+### CONTRIBUTORS
+
+Thanks to:
+
+ * [Leonardo Valeri Manera (Taverius)](mailto:l.valerimanera@gmail.com) - [github](https://github.com/Taverius)
+
+
 ### LICENSE
 
  * Author:   [Sung Pae](mailto:sung@metablu.com)
