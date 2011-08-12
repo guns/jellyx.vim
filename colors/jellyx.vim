@@ -46,13 +46,15 @@ if &t_Co != 256 && ! has('gui_running')
     finish
 endif
 
-" TODO: isn't there an analogue of system() that discards output and returns exit value?
-if has('gui_running')
-    let s:term_has_italic = exists('g:jellyx_italic') ? g:jellyx_italic : 1
-elseif len($COMSPEC) && empty($SHELL)
-    let s:term_has_italic = 0
-else
-    let s:term_has_italic = system('command -v tput && tput sitm && echo -n true') =~# 'true$'
+" Special handling for italics
+let s:enable_italic = exists('g:jellyx_italic') ? g:jellyx_italic == 1 : 1
+let s:term_has_italic = 0
+if !has('gui_running') && s:enable_italic
+    try
+        " TODO: isn't there an analogue of system() that discards output and returns exit value?
+        silent! let s:term_has_italic = system('command -v tput && tput sitm && echo -n t') =~# 't$'
+    catch
+    endtry
 endif
 
 "}}}
@@ -128,10 +130,20 @@ function! s:HI(group, fg, bg, fx, ...)
     endif
 
     if a:fx != '-'
-        if a:fx =~ 'italic' && !s:term_has_italic
-            execute 'highlight '.a:group.' term='.a:fx.' gui='.a:fx.' cterm='.substitute(a:fx,'italic','bold','g')
+        if a:fx =~ 'italic'
+            if !s:enable_italic
+                let ctfx = substitute(a:fx,'italic','bold','g')
+                let gfx  = ctfx
+            elseif s:term_has_italic
+                let ctfx = a:fx
+                let gfx  = a:fx
+            else
+                let ctfx = substitute(a:fx,'italic','bold','g')
+                let gfx  = a:fx
+            endif
+            execute 'highlight '.a:group.' term='.ctfx.' cterm='.ctfx.' gui='.gfx
         else
-            execute 'highlight '.a:group.' term='.a:fx.' gui='.a:fx.' cterm='.a:fx
+            execute 'highlight '.a:group.' term='.a:fx.' cterm='.a:fx.' gui='.a:fx
         endif
     endif
 
