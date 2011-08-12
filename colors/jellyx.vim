@@ -47,7 +47,13 @@ if &t_Co != 256 && ! has('gui_running')
 endif
 
 " TODO: isn't there an analogue of system() that discards output and returns exit value?
-let s:term_has_italic = system('command -v tput && tput sitm && echo -n true') =~# 'true$'
+if has('gui_running')
+    let s:term_has_italic = exists('g:jellyx_italic') ? g:jellyx_italic : 1
+elseif len($COMSPEC) && empty($SHELL)
+    let s:term_has_italic = 0
+else
+    let s:term_has_italic = system('command -v tput && tput sitm && echo -n true') =~# 'true$'
+endif
 
 "}}}
 
