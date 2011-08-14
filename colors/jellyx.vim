@@ -181,7 +181,11 @@ HI StatusLineNC     -       234     NONE
 HI TabLine          249     236     NONE
 HI TabLineSel       -       bg      bold,italic
 HI TabLineFill      bg      0       NONE
-HI VertSplit        234     234     NONE
+if exists('&fillchars') && &fillchars !~# '\Vvert:|'
+    HI VertSplit    236     bg      NONE
+else
+    HI VertSplit    234     234     NONE
+endif
 
 HI Pmenu            fg      234     -
 HI PmenuSel         0       140     -
