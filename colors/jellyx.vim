@@ -8,7 +8,7 @@
 " Version:  0.1
 " Author:   Sung Pae <self@sungpae.com>
 " Homepage: http://github.com/guns/jellyx.vim
-" License:  MIT (knock yourself out)
+" License:  MIT
 
 
 " INSPIRED BY: {{{
@@ -117,9 +117,9 @@ let s:xterm_colors = {
     \ '250': '#bcbcbc', '251': '#c6c6c6', '252': '#d0d0d0', '253': '#dadada', '254': '#e4e4e4',
     \ '255': '#eeeeee', 'fg': 'fg', 'bg': 'bg', 'NONE': 'NONE' } "}}}
 
-" We are primarily targeting 256-color terminals; "{{{
+" We are primarily targeting 256-color terminals; {{{
 " corresponding GUI RGB values are therefore easy to obtain
-command! -nargs=+ HI call s:HI(<f-args>)
+command! -nargs=+ -bar HI call s:HI(<f-args>)
 function! s:HI(group, fg, bg, fx, ...)
     if a:fg != '-'
         execute 'highlight '.a:group.' ctermfg='.a:fg.' guifg='.s:xterm_colors[a:fg]
@@ -158,8 +158,8 @@ endfunction "}}}
 
 """ Common UI {{{
 
-HI Normal           252     0       NONE
-HI Cursor           -       214     -
+HI Normal           252     0       NONE        | " fg and bg are mandatory and must be numbers
+HI Cursor           175     -       -
 
 HI CursorLine       -       233     NONE
 HI CursorColumn     -       233     NONE
@@ -238,17 +238,16 @@ HI diffText         bg      174     NONE
 
 """ Custom groups {{{
 
-if exists('g:jellyx_show_whitespace')
-    augroup jellyx_show_whitespace
-        autocmd!
-        autocmd Syntax *
-            \ syntax match Tab           /\v\t/      containedin=ALL |
-            \ syntax match TrailingWS    /\v\s+$/    containedin=ALL
-    augroup END
+command! JellyXToggleWhitespace
+    \ syntax match Tab           /\v\t/      containedin=ALL |
+    \ syntax match TrailingWS    /\v\s+$/    containedin=ALL
 
-    HI Tab          -       234     -
-    HI TrailingWS   -       89      -
-endif
+augroup JellyX
+    autocmd!
+augroup END
+
+HI Tab          -       234     -
+HI TrailingWS   -       89      -
 
 "}}}
 

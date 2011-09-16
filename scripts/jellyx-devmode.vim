@@ -1,26 +1,33 @@
 """ Run as `vim -S jellyx-devmode.vim', or `rake devmode'
 
-if exists('jellyx_devmode')
-    finish
-endif
-let jellyx_devmode = 1
+" Quick colorscheme switcher "{{{
+let s:Colorschemes = [
+    \ '',
+    \ 'xoria256',
+    \ 'jellybeans',
+    \ 'tir_black'
+\ ]
 
-" extend core vim syntax groups
-silent! syntax clear vimHighlight
-syntax match vimHighlight "\<HI\>" skipwhite nextgroup=vimHiBang,@vimHighlightCluster
-
-" Quick colorscheme switcher
 noremap <Leader><Leader> :call <SID>ToggleColorscheme()<CR>
-function! <SID>ToggleColorscheme(...)
-    if a:0 && a:1 == 'init'
-        :source <sfile>:p:h/colors/jellyx.vim
-    elseif g:colors_name == 'jellyx'
-        :colorscheme xoria256
-    elseif g:colors_name == 'xoria256'
-        :colorscheme jellybeans
+function! <SID>ToggleColorscheme()
+    if !exists('g:JellyXToggle')
+        let g:JellyXToggle = 0
+        let init = 1
+    endif
+
+    if g:JellyXToggle
+        let name = s:Colorschemes[g:JellyXToggle]
+        execute 'colorscheme '.name
     else
-        :source <sfile>:p:h/colors/jellyx.vim
+        let name = 'jellyx [dev]'
+        source <sfile>:p:h/colors/jellyx.vim
+    endif
+
+    let g:JellyXToggle = (g:JellyXToggle + 1) % len(s:Colorschemes)
+
+    if !exists('l:init')
+        call system('command -v growlnotify && growlnotify Colorscheme -m '.name)
     endif
 endfunction
 
-call <SID>ToggleColorscheme('init')
+call <SID>ToggleColorscheme() "}}}
