@@ -51,8 +51,8 @@ let s:enable_italic = exists('g:jellyx_italic') ? g:jellyx_italic == 1 : 1
 let s:term_has_italic = 0
 if !has('gui_running') && s:enable_italic
     try
-        " TODO: isn't there an analogue of system() that discards output and returns exit value?
-        silent! let s:term_has_italic = system('command -v tput && tput sitm && echo -n t') =~# 't$'
+        call system('/bin/sh -c "command -v tput && tput sitm"')
+        silent! let s:term_has_italic = !v:shell_error
     catch
     endtry
 endif
