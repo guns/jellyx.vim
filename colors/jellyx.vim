@@ -163,6 +163,9 @@ HI Cursor           -       214     -
 
 HI CursorLine       -       233     NONE
 HI CursorColumn     -       233     NONE
+if hlexists('CursorLineNr')
+    HI CursorLineNr 240     233     NONE
+endif
 
 HI Visual           fg      96      -
 HI VisualNOS        fg      60      NONE
