@@ -163,6 +163,7 @@ HI Cursor           -       214     -
 
 HI CursorLine       -       233     NONE
 HI CursorColumn     -       233     NONE
+HI ColorColumn      -       233     NONE
 if hlexists('CursorLineNr')
     HI CursorLineNr 240     233     NONE
 endif
@@ -176,7 +177,6 @@ HI LineNr           240     bg      -
 HI FoldColumn       240     bg      -
 HI SignColumn       240     bg      -
 HI NonText          240     bg      -
-HI ColorColumn      fg      60      NONE
 
 HI Folded           232     60      bold,italic
 HI StatusLine       -       234     bold
