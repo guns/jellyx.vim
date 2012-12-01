@@ -178,7 +178,7 @@ HI FoldColumn       240     bg      -
 HI SignColumn       240     bg      -
 HI NonText          240     bg      -
 
-HI Folded           232     60      bold,italic
+HI Folded           240     232     bold,italic
 HI StatusLine       -       234     bold
 HI StatusLineNC     -       234     NONE
 HI TabLine          249     236     NONE
