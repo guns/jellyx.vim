@@ -6,12 +6,11 @@
 "                |___|
 
 " Version:  0.1
-" Author:   Sung Pae <sung@metablu.com>
+" Author:   Sung Pae <self@sungpae.com>
 " Homepage: http://github.com/guns/jellyx.vim
-" License:  MIT (knock yourself out)
+" License:  MIT
 
-
-" INSPIRED BY: {{{
+" INSPIRED BY:
 "
 " Main color palette from Xoria256.vim:
 "
@@ -24,11 +23,8 @@
 " Homepage: http://github.com/nanotech/jellybeans.vim
 " License:  MIT
 " Copyright (c) 2009-2010 NanoTech
-"
-"}}}
 
-
-""" Initialize {{{
+""" Initialize
 
 set background=dark
 
@@ -57,12 +53,9 @@ if !has('gui_running') && s:enable_italic
     endtry
 endif
 
-"}}}
+""" Functions
 
-
-""" Functions {{{
-
-" http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html {{{
+" http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 let s:xterm_colors = {
     \ '0':   '#000000', '1':   '#800000', '2':   '#008000', '3':   '#808000', '4':   '#000080',
     \ '5':   '#800080', '6':   '#008080', '7':   '#c0c0c0', '8':   '#808080', '9':   '#ff0000',
@@ -115,9 +108,9 @@ let s:xterm_colors = {
     \ '240': '#585858', '241': '#606060', '242': '#666666', '243': '#767676', '244': '#808080',
     \ '245': '#8a8a8a', '246': '#949494', '247': '#9e9e9e', '248': '#a8a8a8', '249': '#b2b2b2',
     \ '250': '#bcbcbc', '251': '#c6c6c6', '252': '#d0d0d0', '253': '#dadada', '254': '#e4e4e4',
-    \ '255': '#eeeeee', 'fg': 'fg', 'bg': 'bg', 'NONE': 'NONE' } "}}}
+    \ '255': '#eeeeee', 'fg': 'fg', 'bg': 'bg', 'NONE': 'NONE' }
 
-" We are primarily targeting 256-color terminals; "{{{
+" We are primarily targeting 256-color terminals;
 " exact GUI RGB values are therefore easy to obtain
 command! -nargs=+ HI call s:HI(<f-args>)
 function! s:HI(group, fg, bg, fx, ...)
@@ -151,12 +144,9 @@ function! s:HI(group, fg, bg, fx, ...)
     if a:0
         execute 'highlight '.a:group.' '.join(a:000,' ')
     endif
-endfunction "}}}
+endfunction
 
-"}}}
-
-
-""" Common UI {{{
+""" Common UI
 
 HI Normal           252     0       NONE
 HI Cursor           -       214     -
@@ -206,10 +196,7 @@ HI SpecialKey       77      -       -
 HI ErrorMsg         -       88      -
 HI MatchParen       fg      17      bold
 
-"}}}
-
-
-""" Common Syntax {{{
+""" Common Syntax
 
 HI Comment          244     -       -
 HI Constant         229     -       -
@@ -224,10 +211,7 @@ HI Todo             184     bg      bold
 HI Type             146     -       NONE
 HI Underlined       39      -       underline
 
-"}}}
-
-
-""" Diff / Vimdiff {{{
+""" Diff / Vimdiff
 
 HI diffAdded        150     -       -
 HI diffRemoved      174     -       -
@@ -236,10 +220,7 @@ HI diffDelete       bg      186     NONE
 HI diffChange       bg      181     -
 HI diffText         bg      174     NONE
 
-"}}}
-
-
-""" Custom groups {{{
+""" Custom groups
 
 if exists('g:jellyx_show_whitespace')
     augroup jellyx_show_whitespace
@@ -253,14 +234,9 @@ if exists('g:jellyx_show_whitespace')
     HI TrailingWS   -       89      -
 endif
 
-"}}}
-
-
-""" Cleanup {{{
+""" Cleanup
 
 delcommand  HI
 delfunction s:HI
-
-"}}}
 
 " vim: set expandtab ts=4 sts=4 sw=4 :
