@@ -226,8 +226,8 @@ if exists('g:jellyx_show_whitespace')
     augroup jellyx_show_whitespace
         autocmd!
         autocmd Syntax *
-            \ syntax match Tab           /\v\t/      containedin=ALL |
-            \ syntax match TrailingWS    /\v\s+$/    containedin=ALL
+            \ syntax match Tab           /\v\t/         containedin=ALL |
+            \ syntax match TrailingWS    /\v\s\ze\s*$/  containedin=ALL
     augroup END
 
     HI Tab          -       234     -
