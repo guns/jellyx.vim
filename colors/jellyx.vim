@@ -220,6 +220,10 @@ HI diffDelete       bg      186     NONE
 HI diffChange       bg      181     -
 HI diffText         bg      174     NONE
 
+""" Clojure
+
+HI clojureVariable  146     -       -
+
 """ Custom groups
 
 if exists('g:jellyx_show_whitespace')
