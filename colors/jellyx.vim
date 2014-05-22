@@ -198,6 +198,7 @@ HI MatchParen       fg      17      bold
 
 """ Common Syntax
 
+HI Character        174     -       -
 HI Comment          244     -       -
 HI Constant         229     -       -
 HI Error            -       88      -
@@ -223,6 +224,7 @@ HI diffText         bg      174     NONE
 """ Clojure
 
 HI clojureVariable  146     -       -
+HI clojureCharacter 229     -       -
 
 """ Custom groups
 
