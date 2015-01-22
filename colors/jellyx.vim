@@ -226,6 +226,10 @@ HI diffText         bg      174     NONE
 HI clojureVariable  146     -       -
 HI clojureCharacter 229     -       -
 
+""" Rust
+
+highlight link rustCommentLineDoc Comment
+
 """ Custom groups
 
 if exists('g:jellyx_show_whitespace')
