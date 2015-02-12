@@ -114,11 +114,15 @@ let s:xterm_colors = {
 " exact GUI RGB values are therefore easy to obtain
 command! -nargs=+ HI call s:HI(<f-args>)
 function! s:HI(group, fg, bg, fx, ...)
-    if a:fg != '-'
+    if a:fg == 'NONE'
+        execute 'highlight '.a:group.' ctermfg=NONE guifg=black cterm=NONE'
+    elseif a:fg != '-'
         execute 'highlight '.a:group.' ctermfg='.a:fg.' guifg='.s:xterm_colors[a:fg]
     endif
 
-    if a:bg != '-'
+    if a:bg == 'NONE'
+        execute 'highlight '.a:group.' ctermbg=NONE guibg=black cterm=NONE'
+    elseif a:bg != '-'
         execute 'highlight '.a:group.' ctermbg='.a:bg.' guibg='.s:xterm_colors[a:bg]
     endif
 
@@ -148,8 +152,8 @@ endfunction
 
 """ Common UI
 
-HI Normal           252     0       NONE
-HI Cursor           -       214     -
+HI Normal           252       NONE    NONE
+HI Cursor            -       214     -
 
 HI CursorLine       -       233     NONE
 HI CursorColumn     -       233     NONE
@@ -161,21 +165,21 @@ endif
 HI Visual           fg      96      -
 HI VisualNOS        fg      60      NONE
 HI IncSearch        -       -       inverse
-HI Search           158     bg      underline
+HI Search           158     NONE      underline
 
-HI LineNr           240     bg      -
-HI FoldColumn       240     bg      -
-HI SignColumn       240     bg      -
-HI NonText          240     bg      -
+HI LineNr           240     NONE      -
+HI FoldColumn       240     NONE      -
+HI SignColumn       240     NONE      -
+HI NonText          240     NONE      -
 
 HI Folded           240     232     bold,italic
 HI StatusLine       -       234     bold
 HI StatusLineNC     -       234     NONE
 HI TabLine          249     236     NONE
-HI TabLineSel       -       bg      bold,italic
-HI TabLineFill      bg      0       NONE
+HI TabLineSel       -       NONE      bold,italic
+HI TabLineFill      NONE      0       NONE
 if exists('&fillchars') && &fillchars !~# '\Vvert:|'
-    HI VertSplit    236     bg      NONE
+    HI VertSplit    236     NONE      NONE
 else
     HI VertSplit    234     234     NONE
 endif
@@ -187,10 +191,10 @@ HI PmenuThumb       -       140     -
 HI WildMenu         0       150     bold
 HI Title            225     -       -
 
-HI SpellBad         160     bg      underline   guisp=#df0000
-HI SpellCap         189     bg      underline
-HI SpellRare        168     bg      underline
-HI SpellLocal       87      bg      underline
+HI SpellBad         160     NONE      underline   guisp=#df0000
+HI SpellCap         189     NONE      underline
+HI SpellRare        168     NONE      underline
+HI SpellLocal       87      NONE      underline
 
 HI SpecialKey       77      -       -
 HI ErrorMsg         -       88      -
@@ -208,7 +212,7 @@ HI Number           180     -       -
 HI PreProc          150     -       -
 HI Special          174     -       -
 HI Statement        110     -       NONE
-HI Todo             184     bg      bold
+HI Todo             184     NONE      bold
 HI Type             146     -       NONE
 HI Underlined       39      -       underline
 
@@ -216,10 +220,10 @@ HI Underlined       39      -       underline
 
 HI diffAdded        150     -       -
 HI diffRemoved      174     -       -
-HI diffAdd          bg      151     -
-HI diffDelete       bg      186     NONE
-HI diffChange       bg      181     -
-HI diffText         bg      174     NONE
+HI diffAdd          NONE      151     -
+HI diffDelete       NONE      186     NONE
+HI diffChange       NONE      181     -
+HI diffText         NONE      174     NONE
 
 """ Clojure
 
