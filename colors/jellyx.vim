@@ -161,7 +161,8 @@ endif
 HI Visual           fg      96      -
 HI VisualNOS        fg      60      NONE
 HI IncSearch        -       -       inverse
-HI Search           158     bg      underline
+highlight clear Search " Explicitly clear the default Search style
+HI Search           -       -       bold,underline
 
 HI LineNr           240     bg      -
 HI FoldColumn       240     bg      -
