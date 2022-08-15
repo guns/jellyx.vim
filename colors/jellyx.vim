@@ -245,6 +245,31 @@ if exists('g:jellyx_show_whitespace')
     HI TrailingWS   -       89      -
 endif
 
+""" Terminal
+
+let g:terminal_color_0 = "#101010"
+let g:terminal_color_1 = "#df8787"
+let g:terminal_color_2 = "#afdf87"
+let g:terminal_color_3 = "#f6f6b6"
+let g:terminal_color_4 = "#87afdf"
+let g:terminal_color_5 = "#dfdf87"
+let g:terminal_color_6 = "#b6e0f6"
+let g:terminal_color_7 = "#dddddd"
+let g:terminal_color_8 = "#080808"
+let g:terminal_color_9 = "#df8787"
+let g:terminal_color_10 = "#afdf87"
+let g:terminal_color_11 = "#f6f6b6"
+let g:terminal_color_12 = "#87afdf"
+let g:terminal_color_13 = "#dfdf87"
+let g:terminal_color_14 = "#b6e0f6"
+let g:terminal_color_15 = "#ffffff"
+
+let g:terminal_ansi_colors=[
+    \ g:terminal_color_0, g:terminal_color_1, g:terminal_color_2, g:terminal_color_3,
+    \ g:terminal_color_4, g:terminal_color_5, g:terminal_color_6, g:terminal_color_7,
+    \ g:terminal_color_8, g:terminal_color_9, g:terminal_color_10, g:terminal_color_11,
+    \ g:terminal_color_12, g:terminal_color_13, g:terminal_color_14, g:terminal_color_15 ]
+
 """ Cleanup
 
 delcommand  HI
